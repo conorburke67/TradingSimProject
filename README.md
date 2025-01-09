@@ -52,7 +52,7 @@ In the future, I aim to create features so that you will be able to:
 ### Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/conorburke67/TradingSimProject.git
    ```
 2. Install NPM packages
    ```sh
@@ -72,4 +72,4 @@ In the future, I aim to create features so that you will be able to:
 
 Conor Burke - conortburke11@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/conorburke67/TradingSimProject](https://github.com/conorburke67/TradingSimProject)
