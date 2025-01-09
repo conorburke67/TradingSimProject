@@ -1,0 +1,44 @@
+/* Dashboard container */
+.DashBoard {
+    background-color: #FFFFFF;
+    /* White background */
+    padding: 20px;
+    /* Space around the chart */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+/* Chart title */
+.DashBoard h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333333;
+    /* Darker text color */
+    margin-bottom: 20px;
+}
+
+/* Chart canvas */
+.DashBoard canvas {
+    width: 100%;
+    height: 400px;
+    /* Fixed height for the chart */
+}
+
+.dashButtons {
+    display: flex;
+    /* Arrange children in a row */
+    gap: 10px;
+    justify-content: center;
+}
+
+#dropdown-label {
+    font-size: 12px;
+    color: black;
+}
+
+#tradebutton-label {
+    font-size: 12px;
+    color: black;
+}

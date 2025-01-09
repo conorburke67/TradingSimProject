@@ -1,0 +1,19 @@
+.chartSection {
+    display: flex;
+    /* Enable flexbox layout */
+    justify-content: space-around;
+    /* Distribute space evenly between charts */
+    align-items: center;
+    /* Align charts vertically */
+    gap: 20px;
+    /* Optional: Add space between charts */
+}
+
+.chartSection canvas {
+    max-width: 600px;
+    /* Set maximum width for the charts */
+    max-height: 600px;
+    /* Set maximum height for the charts */
+    flex: 1;
+    /* Allow charts to resize equally */
+}
