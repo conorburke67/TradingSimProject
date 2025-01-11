@@ -2,11 +2,28 @@ import yfinance as yf
 from flask import jsonify
 
 stock = yf.Ticker("AAPL")
+
+company_name = stock.info.get('longName')
+# print(company_name)
+
+# recs = stock.recommendations_summary
+
+# print(recs)
+
 curr_price = stock.info
-for x in curr_price.keys():
+
+recs = stock.get_recommendations()
+recs = recs.to_dict()
+print(recs)
+
+for x in recs:
     print(x)
 
-print(stock.info["52WeekChange"])
+# for x in curr_price.keys():
+#     print(x, curr_price[x])
+    
+
+# print(stock.info["52WeekChange"])
 # # print(stock.info["sector"])
 
 

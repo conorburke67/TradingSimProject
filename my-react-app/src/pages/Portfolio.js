@@ -42,7 +42,6 @@ function Portfolio() {
         const fetchData = async () => {
             const stats = await fetchAggStats();
             if (stats) {
-                console.log(stats);
                 setSectors(Object.keys(stats['sectors']));
                 const sectorDicts = stats['sectors'];
                 const values = Object.values(sectorDicts)
@@ -140,7 +139,6 @@ function Portfolio() {
                         displayColors: false,
                         callbacks: {
                             title: (tooltipItems) => {
-                                console.log(tooltipItems[0]);
                                 return tooltipItems[0].label + ": " + formatPercent(tooltipItems[0].raw);
                             },
                             label: (tooltipItem) => {

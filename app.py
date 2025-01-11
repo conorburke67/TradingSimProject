@@ -273,6 +273,28 @@ def get_agg_stats():
 
     return jsonify({"industries": industries, "sectors": sectors})
 
+@app.route('/api/getstockinfo', methods=['GET', 'POST'])
+def get_stock_info():
+    # Get the request JSON body
+    specs = request.json
+
+    # Validate the input
+    if 'Ticker' not in specs:
+        return jsonify({"error": "Ticker symbol is required"}), 400
+
+    ticker_symbol = specs['Ticker']
+
+    # Check if the ticker is valid
+    if not is_valid_ticker(ticker_symbol):
+        return jsonify({"error": f"Invalid ticker symbol: {ticker_symbol}"}), 400
+
+    # Fetch historical data
+    stock = yf.Ticker(ticker_symbol)
+    recs = stock.get_recommendations().to_dict()
+    info = stock.info
+
+    return jsonify({"info" : info, "recommendations" : recs})
+
 @app.before_request
 def handle_preflight():
     if request.method == "OPTIONS":
